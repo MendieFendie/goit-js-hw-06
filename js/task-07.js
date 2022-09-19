@@ -1,12 +1,11 @@
-const rangeInput = document.querySelector('input[type="range"]');
-const input = document.getElementById("font-size-control");
-const output = document.getElementById("text");
+const inputEl = document.getElementById("font-size-control");
+const outputEl = document.getElementById("text");
 
-input.step = "1";
-input.value = "16";
-output.style.fontSize = "16px";
+inputEl.step = "1";
+inputEl.value = "16";
+outputEl.style.fontSize = "16px";
 
-rangeInput.addEventListener(
+inputEl.addEventListener(
   "input",
-  (e) => (output.style.fontSize = e.target.value + "px")
+  (e) => (outputEl.style.fontSize = e.target.value + "px")
 );
