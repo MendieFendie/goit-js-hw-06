@@ -8,14 +8,16 @@ function onFormSubmit(event) {
   const formElements = event.currentTarget.elements;
   const email = formElements.email.value;
   const password = formElements.password.value;
-  const data = {
-    email,
-    password,
-  };
+
   if (email === "" || password === "") {
     alert("Please enter in all fields");
   } else {
-    console.log("email:", email);
-    console.log("password:", password);
+    const data = {
+      email,
+      password,
+    };
+    console.log(data);
+    formElements.email.value = "";
+    formElements.password.value = "";
   }
 }
